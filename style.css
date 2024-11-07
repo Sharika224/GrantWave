@@ -1,0 +1,202 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #e0f7fa;
+}
+
+/* Full-screen container */
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #e2f1f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+    box-sizing: border-box;
+}
+
+/* Header styling to fit full width with no space above */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Ensures header spans full viewport width */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1e5b80;
+    padding: 10px 20px;
+    z-index: 1000; /* Ensures it stays on top of other content */
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Centered navigation links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-icons .icon {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Profile section styling */
+.profile {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 70px; /* Offset by header height */
+    padding-left: 20px;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.details {
+    color: #01579b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.documents, .actions, .contact-info {
+    width: 100%;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.documents h3 {
+    color: #0277bd;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.document-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.document-item input[type="text"] {
+    width: 40%;
+    padding: 8px;
+    border: 1px solid #0277bd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.document-item button {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4fc3f7;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.document-item button:hover {
+    background-color: #0288d1;
+}
+
+.digilocker-logo {
+    height: 40px;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.action-button {
+    margin: 0 15px;
+    padding: 12px 20px;
+    border-radius: 50%;
+    border: none;
+    background-color: #4fc3f7;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background-color: #0288d1;
+}
+
+.contact-info {
+    color: #01579b;
+    font-size: 14px;
+    padding-left: 20px;
+}
+
+.contact-info h3 {
+    color: #0277bd;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .document-item input[type="text"] {
+        width: 60%;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .action-button {
+        margin: 10px 0;
+    }
+}
